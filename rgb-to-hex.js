@@ -6,4 +6,3 @@ module.exports.componentToHex = (c) => {
 module.exports.rgbToHex = (r, g, b) => {
     return "#" + this.componentToHex(r) + this.componentToHex(g) + this.componentToHex(b);
   }
-

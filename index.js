@@ -6,7 +6,7 @@ const hexToHSL = require('./hex-to-hsl')
 if (process.argv[2] === "hex") {
     
     for(let i = 3; i < process.argv.length; i++){
-        console.log(hexCode(process.argv[i]))
+        console.log(`rgb(${hexCode(process.argv[i]).r}, ${hexCode(process.argv[i]).g}, ${hexCode(process.argv[i]).b})`)
         console.log(hexToHSL(process.argv[i]))
     }
 
