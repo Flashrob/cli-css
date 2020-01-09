@@ -4,8 +4,11 @@ const rgbToHSL = require('./rgb-to-hsl')
 const hexToHSL = require('./hex-to-hsl')
 
 if (process.argv[2] === "hex") {
-    console.log(hexCode(process.argv[3]))
-    console.log(hexToHSL(process.argv[3]))
+    
+    for(let i = 3; i < process.argv.length; i++){
+        console.log(hexCode(process.argv[i]))
+        console.log(hexToHSL(process.argv[i]))
+    }
 
 } else if (process.argv[2] === "rgb") {
     let r = parseInt(process.argv[3])
@@ -16,4 +19,5 @@ if (process.argv[2] === "hex") {
 
     console.log(rgb)
     console.log(`H: ${hsl[0]*360} S: ${hsl[1]*100}% L: ${hsl[2]*100}%`)
-}
+} 
+
